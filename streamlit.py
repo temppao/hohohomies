@@ -11,7 +11,7 @@ st.title("Hate Speech Classification")
 user_input = st.text_area("Enter text for hate speech classification:")
 
 def classify_hate_speech(text):
-    response = openai.Completion.create(
+    response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
