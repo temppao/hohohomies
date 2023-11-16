@@ -12,8 +12,7 @@ def classify_hate_speech(text):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": text},
+            {"role": "system", "content": text},
         ],
     )
     generated_text = response['choices'][0]['text']
@@ -21,7 +20,7 @@ def classify_hate_speech(text):
 
 if st.button("Submit"):
     if user_input:
-        classification_result = classify_hate_speech(text)
+        classification_result = classify_hate_speech(user_input)
 
         st.subheader("Classification Result:")
         st.write(classification_result)
