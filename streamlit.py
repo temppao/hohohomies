@@ -4,8 +4,6 @@ import os
 
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
-prompt = "\n\nYou must classify the statement above whether it is hate speech or not. If the statement is not considered hate speech, you must output 'This is not an example of hate speech.'; however, if the example is considered hate speech, you must specify what kind of hate speech it is (examples: racism, sexism, religion, etc.), and you must output 'This is an example of hate speech. It is (insert type of hate speech).'"
-
 st.title("Hate Speech Classification")
 
 user_input = st.text_area("Enter text for hate speech classification:")
@@ -23,7 +21,6 @@ def classify_hate_speech(text):
 
 if st.button("Submit"):
     if user_input:
-        text = user_input.join(prompt)
         classification_result = classify_hate_speech(text)
 
         st.subheader("Classification Result:")
