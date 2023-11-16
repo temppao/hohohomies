@@ -11,11 +11,11 @@ st.title("Hate Speech Classification")
 user_input = st.text_area("Enter text for hate speech classification:")
 
 def classify_hate_speech(text):
-    # Replace "your_engine_id" with the ID of the GPT-3.5 Turbo engine
     response = openai.Completion.create(
-        engine="gpt-3.5-turbo",
-        prompt=text,
-        n=1,
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": text},
     )
     generated_text = response['choices'][0]['text']
     return generated_text
