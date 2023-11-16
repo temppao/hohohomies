@@ -1,13 +1,9 @@
 import streamlit as st
 import openai
-from dotenv import load_dotenv
 import os
 
-# Load environment variables from the .env file
-load_dotenv()
-
 # Set your OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 # Streamlit app title
 st.title("Hate Speech Classification with GPT-3.5 Turbo")
