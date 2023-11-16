@@ -16,6 +16,7 @@ def classify_hate_speech(text):
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": text},
+        ],
     )
     generated_text = response['choices'][0]['text']
     return generated_text
