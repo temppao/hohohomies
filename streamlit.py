@@ -9,14 +9,13 @@ st.title("Hate Speech Classification")
 user_input = st.text_area("Enter text for hate speech classification:")
 
 def classify_hate_speech(text):
-    response = openai.ChatCompletion.create(
+    completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": text},
         ],
     )
-    generated_text = response['choices'][0]['text']
-    return generated_text
+    return completion.choices[0].message['content']
 
 if st.button("Submit"):
     if user_input:
