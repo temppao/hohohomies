@@ -20,11 +20,12 @@ def classify_hate_speech(text):
     generated_text = response['choices'][0]['text']
     return generated_text
 
-if user_input:
-    text = user_input.join(prompt)
-    classification_result = classify_hate_speech(text)
+if st.button("Submit"):
+    if user_input:
+        text = user_input.join(prompt)
+        classification_result = classify_hate_speech(text)
 
-    st.subheader("Classification Result:")
-    st.write(classification_result)
-else:
-    st.info("Please enter text for hate speech classification.")
+        st.subheader("Classification Result:")
+        st.write(classification_result)
+    else:
+        st.warning("Please enter text for hate speech classification.")
