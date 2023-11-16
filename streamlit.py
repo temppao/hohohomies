@@ -7,7 +7,7 @@ openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 # Set prompt
 prompt = "You must classify the statement above whether it is hate speech or not. If the statement is not considered hate speech, you must output 'This is not an example of hate speech.'; however, if the example\
-        is considered hate speech, you must specify what kind of hate speech it is (examples: racism, sexism, religion, etc.), and you must output 'This is an example of hate speech. It is {insert type of hate speech}.'
+        is considered hate speech, you must specify what kind of hate speech it is (examples: racism, sexism, religion, etc.), and you must output 'This is an example of hate speech. It is (insert type of hate speech).'
 
 # Streamlit app title
 st.title("Hate Speech Classification with GPT-3.5 Turbo")
