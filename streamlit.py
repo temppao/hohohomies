@@ -3,14 +3,14 @@ import openai
 import os
 
 def main():
-    tabs = ["Home", "Project Overview", "Hate Speech Identification App"]
+    tabs = ["Home", "Project Overview", "Application"]
     selected_tab = st.sidebar.selectbox("Select a Page", tabs)
 
     if selected_tab == "Home":
         home_content()
     elif selected_tab == "Project Overview":
         overview_content()
-    elif selected_tab == "Identification App":
+    elif selected_tab == "Application":
         app_content()
 
 def home_content():
