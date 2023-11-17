@@ -12,8 +12,9 @@ def main():
         app_content()
 
 def home_content():
-    st.title("Welcome to The Ho-Ho-Homies Streamlit App!")
-    st.subheader("Please use the sidebar to navigate the page!")
+    st.markdown("<h1 style='text-align: center;'>Welcome to The Ho-Ho-Homies Streamlit App!</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>This app is created for Eskwelabs DSF12 Sprint 4 by The Ho-Ho-Homies</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>Please use the sidebar to navigate the page.</p>", unsafe_allow_html=True)
 
 def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
