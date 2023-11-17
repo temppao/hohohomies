@@ -8,6 +8,10 @@ st.title("Hate Speech Classification")
 
 user_input = st.text_area("Enter text for hate speech classification:")
 
+pages = ["Home", "App"]
+select_page = st.sidebar.selectbox("Select Page", pages)
+
+
 def classify_hate_speech(text):
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
