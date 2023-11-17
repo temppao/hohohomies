@@ -3,17 +3,18 @@ import openai
 import os
 
 def main():
-    st.title("Welcome to The Ho-Ho-Homies Streamlit App!")
-
     tabs = ["Home", "Hate Speech Identification App"]
     selected_tab = st.sidebar.selectbox("Select a Page", tabs)
 
     if selected_tab == "Home":
-        main()
+        home_content()
     elif selected_tab == "Hate Speech Identification App":
-        tab1_content()
+        app_content()
 
-def tab1_content():
+def home_content():
+    st.title("Welcome to The Ho-Ho-Homies Streamlit App!")
+
+def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
     
     st.title("Hate Speech Identification App")
