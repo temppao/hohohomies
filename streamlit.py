@@ -3,7 +3,7 @@ import openai
 import os
 
 def main():
-    tabs = ["Home", "Hate Speech Identification App"]
+    tabs = ["Home", "Project Overview", "Hate Speech Identification App"]
     selected_tab = st.sidebar.selectbox("Select a Page", tabs)
 
     if selected_tab == "Home":
@@ -15,6 +15,9 @@ def home_content():
     st.markdown("<h1 style='text-align: center;'>Welcome to The Ho-Ho-Homies Streamlit App!</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>This app is created for Eskwelabs DSF12 Sprint 4 by The Ho-Ho-Homies</p>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>Please use the sidebar to navigate the page.</p>", unsafe_allow_html=True)
+
+def overview_content():
+    st.title("Project Overview")
 
 def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
@@ -44,6 +47,6 @@ def app_content():
             st.write(classification_result)
         else:
             st.warning("Please enter text for hate speech classification.")
-
+            
 if __name__ == "__main__":
     main()
