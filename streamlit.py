@@ -25,7 +25,7 @@ def overview_content():
     st.header("What is NLP?")
     st.write("<p style='text-align: justify;'>Natural language processing (NLP) is a branch of artificial intelligence (AI) that enables computers to comprehend, generate, and manipulate human language.</p>", unsafe_allow_html=True)
     st.header("How can NLP help in addressing 'Hate Speech'?")
-    st.write("<p style='text-align: justify;'>NLP can be used to identify the different kinds of 'Hate Speech' circulating around the internet. The aim of this project is to raise awareness on statements that might be considered offensive and give people the proper knowledge to distinguish 'Hate Speech'.</p>", unsafe_allow_html=True)
+    st.write("<p style='text-align: justify;'>NLP can be used to identify the different kinds of 'Hate Speech' circulating around the internet. The aim of this project is to raise awareness on statements that might be considered offensive and give people the proper knowledge to distinguish different kinds of 'Hate Speech'.</p>", unsafe_allow_html=True)
 
 def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
