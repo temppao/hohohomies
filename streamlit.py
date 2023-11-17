@@ -13,12 +13,12 @@ def main():
 
 def home_content():
     st.title("Welcome to The Ho-Ho-Homies Streamlit App!")
+    st.subheader("Please use the sidebar to navigate the page!")
 
 def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
     
     st.title("Hate Speech Identification App")
-    st.write("This app was created for Eskwelabs Sprint 4 by The Ho-Ho-Homies")
     
     user_input = st.text_area("Enter text for hate speech classification:")
     
