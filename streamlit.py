@@ -21,7 +21,7 @@ def home_content():
 def overview_content():
     st.title("Project Overview")
     st.header("What is 'Hate Speech'?")
-    st.markdown("<p style='text-align: justify;'>In common language, “hate speech” refers to offensive discourse targeting a group or an individual based on inherent characteristics (such as race, religion or gender). These actions may threaten social peace.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: justify;'>In common language, “hate speech” refers to offensive discourse targeting a group or an individual based on inherent characteristics (such as race, religion, or gender). These actions may threaten social peace.</p>", unsafe_allow_html=True)
     st.header("What is NLP?")
     st.write("<p style='text-align: justify;'>Natural language processing (NLP) is a branch of artificial intelligence (AI) that enables computers to comprehend, generate, and manipulate human language.</p>", unsafe_allow_html=True)
     st.header("How can NLP help in addressing 'Hate Speech'?")
