@@ -20,6 +20,8 @@ def home_content():
 
 def overview_content():
     st.title("Project Overview")
+    st.header("What is 'Hate Speech'?")
+    st.write("In common language, “hate speech” refers to offensive discourse targeting a group or an individual based on inherent characteristics (such as race, religion or gender) and that may threaten social peace.")
 
 def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
