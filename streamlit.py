@@ -8,7 +8,7 @@ def main():
 
     if selected_tab == "Home":
         home_content()
-    elif selected_tab == "Project Overview"
+    elif selected_tab == "Project Overview":
         overview_content()
     elif selected_tab == "Identification App":
         app_content()
