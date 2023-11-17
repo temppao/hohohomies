@@ -21,7 +21,11 @@ def home_content():
 def overview_content():
     st.title("Project Overview")
     st.header("What is 'Hate Speech'?")
-    st.write("In common language, “hate speech” refers to offensive discourse targeting a group or an individual based on inherent characteristics (such as race, religion or gender) and that may threaten social peace.")
+    st.write("In common language, “hate speech” refers to offensive discourse targeting a group or an individual based on inherent characteristics (such as race, religion or gender). These actions may threaten social peace.")
+    st.header("What is NLP?")
+    st.write("Natural language processing (NLP) is a branch of artificial intelligence (AI) that enables computers to comprehend, generate, and manipulate human language.")
+    st.header("How can NLP help in addressing 'Hate Speech'?")
+    st.write("NLP can be used to identify the different kinds of 'Hate Speech' circulating around the internet. The aim of this project is to raise awareness on statements that might be considered offensive and give people the proper knowledge to distinguish 'Hate Speech'.")
 
 def app_content():
     openai.api_key = os.environ.get("OPENAI_API_KEY")
