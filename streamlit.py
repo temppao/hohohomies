@@ -32,7 +32,7 @@ def app_content():
     
     st.title("Hate Speech Identification App")
     
-    user_input = st.text_area("Enter text for hate speech classification:")
+    user_input = st.text_area("Enter text for hate speech identification:")
     
     def classify_hate_speech(text):
         completion = openai.ChatCompletion.create(
