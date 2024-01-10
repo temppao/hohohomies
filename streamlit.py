@@ -2,6 +2,8 @@ import streamlit as st
 import openai
 import os
 
+OPEN_AI_KEY = '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'
+
 def main():
     tabs = ["Home", "Project Overview", "Application"]
     selected_tab = st.sidebar.selectbox("Select a Page", tabs)
@@ -28,7 +30,7 @@ def overview_content():
     st.write("<p style='text-align: justify;'>NLP can be used to identify the different kinds of 'Hate Speech' circulating around the internet. The aim of this project is to raise awareness on statements that might be considered offensive and give people the proper knowledge to distinguish different kinds of 'Hate Speech'.</p>", unsafe_allow_html=True)
 
 def app_content():
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
+    openai.api_key = OPEN_AI_KEY
     
     st.title("Hate Speech Identification App")
     
