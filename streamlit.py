@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 import os
 
-OPEN_AI_KEY = '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'
+OPEN_AI_KEY = 'sk-B6Mrqnq8BI8Cw0hguhWKmgMmx3uJ1gOXTtzOeBXl7bT3BlbkFJc7L_MlxlGmepR5EQbbJPuJS5Ow3lf3_2zgU7e8-j0A'
 
 def main():
     tabs = ["Home", "Project Overview", "Application"]
