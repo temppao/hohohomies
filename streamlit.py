@@ -2,8 +2,6 @@ import streamlit as st
 import openai
 import os
 
-OPEN_AI_KEY = 'sk-kmjdj173SzISY5heJNHbz_urFOGMEkOVKyL3xJBtanT3BlbkFJ6JW_yApJERgU61P05yCm2A9hebVys5s-Y7dEsK-nIA'
-
 def main():
     tabs = ["Home", "Project Overview", "Application"]
     selected_tab = st.sidebar.selectbox("Select a Page", tabs)
